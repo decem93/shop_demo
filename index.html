@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>梅蓝商贸</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript">
+  window.onload=function(){
+    var wrap=document.getElementById('wrap'),
+        pic=document.getElementById('pic').getElementsByTagName("li"),
+        list=document.getElementById('list').getElementsByTagName('li'),
+        index=0,
+        timer=null;
+
+      // 定义并调用自动播放函数
+    timer = setInterval(autoPlay, 2000);
+     
+     // 鼠标划过整个容器时停止自动播放
+    wrap.onmouseover = function () {
+      clearInterval(timer);
+    }
+
+     // 鼠标离开整个容器时继续播放至下一张
+    wrap.onmouseout = function () {
+      timer = setInterval(autoPlay, 2000);
+    }
+     // 遍历所有数字导航实现划过切换至对应的图片
+    for (var i = 0; i < list.length; i++) {
+      list[i].onmouseover = function () {
+        clearInterval(timer);
+        index = this.innerText - 1;
+        changePic(index);
+      };
+    };
+
+    function autoPlay () {
+      if (++index >= pic.length) index = 0;
+      changePic(index);
+    }
+
+      // 定义图片切换函数
+    function changePic (curIndex) {
+      for (var i = 0; i < pic.length; ++i) {
+        pic[i].style.display = "none";
+        list[i].className = "";
+      }
+      pic[curIndex].style.display = "block";
+      list[curIndex].className = "on";
+    }
+
+   };
+
+  </script>	
+</head>
+<body>
+<!-- 页面的顶部 -->
+	<div class="top">
+		<div class="top_page">
+			<div class="top_page_l fl">
+				您好，欢迎进入梅兰商城！
+			</div>
+			<div class="top_page_r fr">
+				 <ul>
+				 	<li><a href="#">建材网首页</a></li>
+				 	<li><a href="#">我的商务室</a><s></s></li>
+				 	<li><a href="#">我的收藏</a><s></s></li>
+				 	<li><a href="#">建材服务</a><s></s></li>
+				 	<li><a href="#">客服中心</a></li>
+				 	<li><a href="#">网站导航</a><s></s></li>
+				 </ul>
+			</div>
+		</div>
+	</div>
+	<!-- 页面的顶部结束 -->
+	<!-- logo开始 -->
+	<div class="logo">
+	<h1 class="logo_l fl">
+		梅兰商贸
+	</h1>
+	<div class="logo_r fr">
+	<div class="logo_r_content">
+	<input type="input" value="请输入关键字" class="logo_r_search fl">
+	<input type="button" value="搜索" class="logo_r_btn fl">
+	</div>
+	</div>
+	</div>
+<!-- logo结束 -->
+<!-- 导航开始 -->
+<div class="nav">
+	<ul>
+	
+		<li><a href="#">首页</a></li>
+		<li><a href="#">建筑材料</a></li>
+		<li><a href="#">儿童安全座椅</a></li>
+		<li><a href="#">工艺美术品</a></li>
+	</ul>
+</div>
+<!-- banner开始 -->
+<div class="banner">
+<div class="subnav fl" >
+<h2>商机市场</h2>
+	<ul>
+		<li class="img1"><a href="#">建筑材料</a></li>
+		<li class="img2"><a href="#">儿童安全座椅</a></li>
+		<li class="img3"><a href="#">工艺美术</a></li>
+		<li class="img4"><a href="#">装饰材料</a></li>
+		<li class="img5"><a href="#">五金材料</a></li>
+		<li class="img6"><a href="#">家居材料</a></li>
+	</ul>
+</div>
+	<div class="wrap fl" id='wrap'>
+    <ul id="pic">
+      <li><img src="http://img.mukewang.com/54111cd9000174cd04900170.jpg" alt=""></li>
+      <li><img src="http://img.mukewang.com/54111dac000118af04900170.jpg" alt=""></li>
+      <li><img src="http://img.mukewang.com/54111d9c0001998204900170.jpg" alt=""></li>
+      <li><img src="http://img.mukewang.com/54111d8a0001f41704900170.jpg" alt=""></li>
+      <li><img src="http://img.mukewang.com/54111d7d00018ba604900170.jpg" alt=""></li>    
+    </ul>
+    <ol id="list">
+      <li class="on">1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ol>
+  </div>
+	<div class="message fr" >
+		<div class="message_top">
+			<p class="fw">建材通大众版</p>
+		<i class="fl"></i>
+		<p class="cheap fl">价格实惠，量身为营销预算不<br/>多的供应商所设。<a href="#">了解详情</a></p>
+		</div>
+		<div class="message_bottom">
+		<p class="findMessage" >找信息或或发信息遇到问题？</p>
+		<p  class="phone"><s></s> 0571-89938887</p>
+<input type="button" class="btn">
+		</div>
+	</div>
+</div>
+<!-- banner结束 -->
+<!-- 导航结束 -->
+<div class="material">建筑材料</div>
+<!-- S 具体信息 -->
+<div class="product">
+	<div class="product_l fl">
+		
+<div class="product_l_top">
+	<div class="p_l_t_product1 fl">
+		<div class="buy fl">
+			<div class="img1"></div>
+			<input type="button" value="立即购买" class="btn">
+		</div>
+		<div class="explain fl">
+					<p class="goodwife">
+					好太太晾衣架 铝钛合金 升降双杆</p>
+					<br>
+					<p class="auto">&nbsp;自动换挡 安全耐用<br>
+					&nbsp;稳定性好 抗氧化强</p><br>
+					<p class="money"><span>239.00</span> &nbsp;<s>￥386.00</s></p>
+					<p class="buyed">限量<i>99</i>件 &nbsp;已售出<i>20</i>件</p>
+		</div>
+	</div>
+	<div class="p_l_t_product1 fl">
+		<div class="buy fl">
+			<div class="img2"></div>
+			<input type="button" value="立即购买" class="btn">
+		</div>
+		<div class="explain fl">
+					<p class="goodwife">
+					好太太晾衣架 铝钛合金 升降双杆</p>
+					<br>
+					<p class="auto">&nbsp;自动换挡 安全耐用<br>
+					&nbsp;稳定性好 抗氧化强</p><br>
+					<p class="money"><span>239.00</span> &nbsp;<s>￥386.00</s></p>
+					<p class="buyed">限量<i>99</i>件 &nbsp;已售出<i>20</i>件</p>
+		</div>
+	</div>
+</div>
+<div class="product_l_line"></div>
+<div class="product_l_top">
+	<div class="p_l_t_product1 fl">
+		<div class="buy fl">
+			<div class="img3"></div>
+			<input type="button" value="立即购买" class="btn">
+		</div>
+		<div class="explain fl">
+					<p class="goodwife">
+					好太太晾衣架 铝钛合金 升降双杆</p>
+					<br>
+					<p class="auto">&nbsp;自动换挡 安全耐用<br>
+					&nbsp;稳定性好 抗氧化强</p><br>
+					<p class="money"><span>239.00</span> &nbsp;<s>￥386.00</s></p>
+					<p class="buyed">限量<i>99</i>件 &nbsp;已售出<i>20</i>件</p>
+		</div>
+	</div>
+	<div class="p_l_t_product1 fl">
+		<div class="buy fl">
+			<div class="img4"></div>
+			<input type="button" value="立即购买" class="btn">
+		</div>
+		<div class="explain fl">
+					<p class="goodwife">
+					好太太晾衣架 铝钛合金 升降双杆</p>
+					<br>
+					<p class="auto">&nbsp;自动换挡 安全耐用<br>
+					&nbsp;稳定性好 抗氧化强</p><br>
+					<p class="money"><span>239.00</span> &nbsp;<s>￥386.00</s></p>
+					<p class="buyed">限量<i>99</i>件 &nbsp;已售出<i>20</i>件</p>
+		</div>
+	</div>
+</div>
+
+
+
+
+</div>
+<div class="product_r fr">
+	<h2>建材资讯</h2>
+	<ul>
+		<li> <s></s><a href="#">贵阳钢材市场7月17日价格行情</a></li>
+		<li> <s></s><a href="#">西安钢材市场7月17日价格行情</a></li>
+		<li> <s></s><a href="#">武汉钢材市场7月17日价格行情</a></li>
+		<li> <s></s><a href="#">南昌钢材市场7月17日价格行情</a></li>
+		<li> <s></s><a href="#">广州钢材市场7月17日价格行情</a></li>
+		<li> <s></s><a href="#">重庆钢材市场7月17日价格行情</a></li>
+		<li> <s></s><a href="#">天津钢材市场7月17日价格行情</a></li>
+		<li> <s></s><a href="#">安阳钢材市场7月17日价格行情</a></li>
+		<li> <s></s><a href="#">台州钢材市场7月17日价格行情</a></li>
+		<li> <s></s><a href="#">厦门钢材市场7月17日价格行情</a></li>
+		<li> <s></s><a href="#">杭州钢材市场7月17日价格行情</a></li>
+	</ul>
+</div>
+</div>
+<!-- E 具体信息 -->
+<!-- S友情链接 -->
+<div class="body5">
+		
+				<ul>
+					<li><a href="#">友情链接:</a></li>
+					<li><a href="#">中视网盟</a></li>
+					<li><a href="#">9355开心创业网</a></li>
+					<li><a href="#">连锁店加盟</a></li>
+					<li><a href="#">就爱加盟网</a></li>
+					<li><a href="#">百度</a></li>
+					<li><a href="#">谷歌</a></li>
+					<li><a href="#">雅虎</a></li>
+					<li><a href="#">新浪</a></li>
+					<li><a href="#">网易</a></li>
+					<li><a href="#">搜狐网</a></li>
+					<li><a href="#">中视网盟</a></li>
+					<li><a href="#">连锁店加盟</a></li>
+					<li><a href="#">就爱加盟网</a></li>
+					<li><a href="#">百度</a></li>
+					<li><a href="#">谷歌</a></li>
+					<li><a href="#">雅虎</a></li>
+					<li><a href="#">新浪</a></li>
+					<li><a href="#">网易</a></li>
+					<li><a href="#">搜狐网</a></li>
+					<li><a href="#">中视网盟</a></li><br/>
+					<li><a href="#">连锁店加盟</a></li>
+					<li><a href="#">就爱加盟网</a></li>
+					<li><a href="#">百度</a></li>
+					<li><a href="#">谷歌</a></li>
+					<li><a href="#">雅虎</a></li>
+					<li><a href="#">新浪</a></li>
+					<li><a href="#">网易</a></li>
+					<li><a href="#">搜狐网</a></li>
+					<li><a href="#">中视网盟</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+
+
+<!-- E友情链接 -->
+<!--S 关于我们-->
+<div class="aboutMe">
+		<p >
+		<a href="#">关于我们</a>
+		<a href="">建材通服务</a>
+		<a href="">网站建设</a>
+		<a href="">诚聘英才</a>
+		<a href="">友情链接</a>
+		<a href="">联系方式</a>
+		<a href="">版权声明</a>
+		<a href="">帮助中心</a>
+		<a href="">网站地图</a>
+		</p>
+		<p >
+		<a href="#">关于我们</a>
+		<a href="">建材通服务</a>
+		<a href="">网站建设</a>
+		<a href="">诚聘英才</a>
+		<a href="">友情链接</a>
+		<a href="">联系方式</a>
+		<a href="">版权声明</a>
+		<a href="">帮助中心</a>
+		<a href="">网站地图</a>
+		</p>
+		<p >
+		<a href="">中国建材网&nbsp; 版权所有2000-2016</a>
+		<a href="">服务热线：0571-89938887</a>
+		<a href="">请与我们联系Service@BMlink.com</a>
+		<a href="">建材网互动群：40135586</a>
+		<a href="">备案：浙B2-2006159</a>
+		</p>
+		</div>
+
+		<!--E 关于我们-->
+
+</body>
+</html>
